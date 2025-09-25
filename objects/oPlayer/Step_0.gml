@@ -1,5 +1,3 @@
-// Step event
-
 // Colisao com o tileset (chao)
 var _COLISION = layer_tilemap_get_id("tl_cenario");
 
@@ -24,6 +22,7 @@ move_and_collide(hs, 0, _COLISION, 12);
 
 // Virar Sprite
 if (hs != 0) oPlayer.image_xscale = sign(hs);
+//if (_right == 1) {image_xscale = -0.05}else{image_xscale = 0.05}
 
 // Verifica se está no chão
 no_chao = place_meeting(x, y + 2, _COLISION);

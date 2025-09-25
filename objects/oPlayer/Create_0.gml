@@ -1,5 +1,3 @@
-// Create event
-
 // 
 hs = 0;
 hsmax = 4;
