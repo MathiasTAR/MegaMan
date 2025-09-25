@@ -14,8 +14,8 @@
   "frames":[
     {"$GMSpriteFrame":"","%Name":"b3a13923-5520-43ab-abdd-a8c27684f368","name":"b3a13923-5520-43ab-abdd-a8c27684f368","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX":0,
-  "gridY":0,
+  "gridX":8,
+  "gridY":8,
   "height":392,
   "HTile":false,
   "layers":[
@@ -23,7 +23,7 @@
   ],
   "name":"tileset1",
   "nineSlice":null,
-  "origin":0,
+  "origin":4,
   "parent":{
     "name":"Sprites",
     "path":"folders/Sprites.yy",
@@ -77,8 +77,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":144,
+    "yorigin":196,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
