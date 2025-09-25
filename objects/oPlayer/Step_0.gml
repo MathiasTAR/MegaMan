@@ -2,6 +2,7 @@ var move_x = keyboard_check(vk_right) - keyboard_check(vk_left);
 var jump   = keyboard_check_pressed(vk_up) || keyboard_check_pressed(vk_space);
 var tiro   = keyboard_check_pressed(ord("Z"));
 
+image_speed = 1
 // Movimento eixo X
 var hsp = move_x * hs;
 
@@ -17,13 +18,12 @@ if (!place_meeting(x + hsp, y, COL_OBJ)) {
 // Virar Sprite
 if (move_x != 0) image_xscale = sign(move_x);
 
-
 // Gravidade
 vs += global.PlayerStats.grav;
 vs = clamp(vs, -global.PlayerStats.pulo_vel, global.PlayerStats.queda_max);
 
 // Pulo
-if (jump && no_chao) {
+if (jump && no_chao && !tiro) {
     vs = -global.PlayerStats.pulo_vel;
     no_chao = false;
 }
@@ -43,27 +43,28 @@ if (!place_meeting(x, y + vs, COL_OBJ)) {
 }
 
 if (tiro and cooldown_tiro == 0) {
-    var bullet = instance_create_layer(x, y, "Instances", oBullet);
+    var bullet = instance_create_layer(x, y - 2, "Instances", oBullet);
     bullet.image_xscale = image_xscale;
-	cooldown_tiro = 15;
-	estado = Estado.Atirando;
+    cooldown_tiro = 10;
+    estado = Estado.Atirando;
 }
-if (cooldown_tiro > 0){cooldown_tiro -= 1}
 
-// ESTADOS
+if (cooldown_tiro > 0) { cooldown_tiro -= 1 }
 
 if (tiro) {
-    if (!no_chao and jump) {
+    if (!no_chao) {
         estado = Estado.PulandoAtirando;
     }
     else if (move_x != 0) {
         estado = Estado.CorrendoAtirando;
     }
-
+    else {
+        estado = Estado.Atirando;
+    }
 }
 else {
     if (!no_chao) {
-        if (vs < 0) {
+        if (vs < 0 and !tiro) {
             estado = Estado.Pulando;
         }
     }
@@ -76,4 +77,3 @@ else {
         }
     }
 }
-

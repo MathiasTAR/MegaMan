@@ -8,10 +8,10 @@ COL_OBJ = Colision;
 
 
 enum Estado {
-    Idle,
+	Idle,
     Correndo,
     Pulando,
     Atirando,
 	CorrendoAtirando,
-	PulandoAtirando
+	PulandoAtirando,
 };
