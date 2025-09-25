@@ -42,24 +42,24 @@ if (!place_meeting(x, y + vs, COL_OBJ)) {
     vs = 0;
 }
 
-if (tiro) {
+if (tiro and cooldown_tiro == 0) {
     var bullet = instance_create_layer(x, y, "Instances", oBullet);
     bullet.image_xscale = image_xscale;
+	cooldown_tiro = 15;
+	estado = Estado.Atirando;
 }
-
+if (cooldown_tiro > 0){cooldown_tiro -= 1}
 
 // ESTADOS
 
 if (tiro) {
-    if (!no_chao) {
+    if (!no_chao and jump) {
         estado = Estado.PulandoAtirando;
     }
     else if (move_x != 0) {
         estado = Estado.CorrendoAtirando;
     }
-    else {
-        estado = Estado.Atirando;
-    }
+
 }
 else {
     if (!no_chao) {
