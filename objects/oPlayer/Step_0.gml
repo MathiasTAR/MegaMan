@@ -41,7 +41,7 @@ if (!no_chao) {
 move_and_collide(0, vs, _COLISION, 20);
 
 if (_tiro && cooldown_tiro == 0) {
-    var bullet = instance_create_layer(x, y - 2, "Instances", oBullet);
+    var bullet = instance_create_layer(x, y+2, "Instances", oBullet);
     bullet.image_xscale = image_xscale;
     cooldown_tiro = 10;
 }
