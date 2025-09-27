@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Menu",
-    "path":"folders/Sprites/Menu.yy",
+    "name":"Inicio",
+    "path":"folders/Sprites/Menu/Inicio.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
