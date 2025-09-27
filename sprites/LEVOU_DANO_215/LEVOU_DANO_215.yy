@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Dano",
-    "path":"folders/Sprites/mascote/Dano.yy",
+    "path":"folders/Sprites/Player/Dano.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

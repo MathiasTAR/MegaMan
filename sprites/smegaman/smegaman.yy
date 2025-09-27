@@ -53,7 +53,7 @@
   "origin":4,
   "parent":{
     "name":"sprites",
-    "path":"folders/Sprites/Player/sprites.yy",
+    "path":"folders/Sprites/Megaman/sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
