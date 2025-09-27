@@ -7,10 +7,10 @@ menu_botoes   = ["Jogar", "Opcao", "Sair"];
 opcoes_botoes = ["Voltar"];
 
 // Inicializa layers
-layer_set_visible("ui_menu", 1);
-layer_set_visible("ui_opcoes", 1);
-
+layer_set_visible("ui_menu", 0);
 layer_set_visible("ui_opcoes", 0);
+
+layer_set_visible("ui_menu", 1);
 
 
 // Função de ação dos botões
