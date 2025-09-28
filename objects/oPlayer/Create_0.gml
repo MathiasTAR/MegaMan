@@ -1,8 +1,15 @@
-// 
+//Controler de velocidade de movimento 
 hs = 0;
 hsmax = 4;
 vs = 0;
 vsmax = 9;
+
+//Vida
+_vidaPlayer = 100;
+_vidaPlayer = clamp(_vidaPlayer, 0, 100);
+
+// Invecibilidade
+pode_dano = 0;
 
 // Gravidade e controle
 no_chao = false;
@@ -10,9 +17,6 @@ grav = 0.4;
 
 // Tempo para cada tiro
 cooldown_tiro = 0;
-
-// Colisão com OBJ
-COL_OBJ = Colision;
 
 // Inputs
 _left  = noone;

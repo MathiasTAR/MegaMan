@@ -22,7 +22,6 @@ move_and_collide(hs, 0, _COLISION, 12);
 
 // Virar Sprite
 if (hs != 0) oPlayer.image_xscale = sign(hs);
-//if (_right == 1) {image_xscale = -0.05}else{image_xscale = 0.05}
 
 // Verifica se está no chão
 no_chao = place_meeting(x, y + 2, _COLISION);
@@ -41,12 +40,14 @@ if (!no_chao) {
 move_and_collide(0, vs, _COLISION, 20);
 
 if (_tiro && cooldown_tiro == 0) {
-    var bullet = instance_create_layer(x, y+2, "Instances", oBullet);
+    var bullet = instance_create_layer(x, y+2, "Player", oBullet);
     bullet.image_xscale = image_xscale;
-    cooldown_tiro = 10;
+    cooldown_tiro = 8;
 }
 
-if (cooldown_tiro > 0) {cooldown_tiro -= 1};
+// Timers
+if (cooldown_tiro > 0) {cooldown_tiro --};
+if (pode_dano > 0) {pode_dano --}
 
 roda_estado();
 
@@ -54,4 +55,4 @@ if (sala1) {room_goto(room1)}
 else if (sala2) {room_goto(room2)}
 else if (sala3) {room_goto(room3)}
 else if (sala4) {room_goto(room4)}
-else if (sala0) {room_goto(Menu)}
+else if (sala0) {room_goto(Debug)}
