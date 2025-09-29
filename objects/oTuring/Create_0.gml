@@ -19,7 +19,7 @@ penas_restantes = 0;              // só usado no ataque de penas
 // ==========================
 // Posições
 // ==========================
-pos_idle = [240, 100];
+pos_idle = [240, 75];
 pos_alvo = [x, y];
 
 // ==========================
