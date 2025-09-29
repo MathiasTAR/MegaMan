@@ -38,9 +38,7 @@
     {"$GMFolder":"","%Name":"tileset","folderPath":"folders/Sprites/tileset.yy","name":"tileset","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
-  "IncludedFiles":[
-    {"$GMIncludedFile":"","%Name":"room1-20250927T194501Z-1-001.zip","CopyToMask":-1,"filePath":"datafiles","name":"room1-20250927T194501Z-1-001.zip","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-  ],
+  "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{

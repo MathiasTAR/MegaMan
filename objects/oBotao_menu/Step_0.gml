@@ -10,7 +10,6 @@ var selecionado = (posicao == controler.botao_selecionado);
 
 
 if (selecionado) {
-	play_sfx(snd_blipSelect, 2)
     xscale = lerp(xscale, botao_x_original * 1.3, 0.1);
     image_index = 1;
 } else {
