@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"IconBoss",
-    "path":"folders/Objetos/Menu/IconBoss.yy",
+    "path":"folders/Objetos/Inimigos/Boss/Menu/IconBoss.yy",
   },
   "parentObjectId":null,
   "persistent":false,
