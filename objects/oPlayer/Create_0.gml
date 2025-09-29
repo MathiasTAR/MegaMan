@@ -8,12 +8,20 @@ vsmax = 9;
 _vidaPlayer = 100;
 _vidaPlayer = clamp(_vidaPlayer, 0, 100);
 
-// Invecibilidade
-pode_dano = 0;
+// Knockback
+kb_timer = 0;
+kb_force = 0;
+kb_dir = 0;
+
+// Invencibilidade
+inv_timer = 0;
+inv_time = 0;
 
 // Gravidade e controle
 no_chao = false;
-grav = 0.4;
+grav = 0.45;
+
+timer_player = 2 * room_speed
 
 // Tempo para cada tiro
 cooldown_tiro = 0;
@@ -24,6 +32,8 @@ _right = noone
 _jump  = noone
 _tiro  = noone
 
+
+#region Iniciar Estados
 // Iniciando o estado Idle
 estado_idle = new estado();
 // Iniciando estado Walk
@@ -36,6 +46,11 @@ estado_shot = new estado();
 estado_shotwalk = new estado();
 // Iniciando estado Shot Jump
 estado_shotjump = new estado();
+// Iniciando estado Sofrendo dano
+estado_dano = new estado();
+// Iniciando estado Morto
+estado_morto = new estado();
+#endregion
 
 #region Idle
 estado_idle.inicia = function()
@@ -47,7 +62,10 @@ estado_idle.inicia = function()
 
 estado_idle.roda = function()
 {
-    if (_tiro && no_chao)
+	if (_vidaPlayer <= 0) {
+        troca_estado(estado_morto);
+    }
+    else if (_tiro && no_chao)
     {
         troca_estado(estado_shot);
     }
@@ -61,7 +79,6 @@ estado_idle.roda = function()
     }
 }
 #endregion
-
 
 #region Walk
 estado_walk.inicia = function()
@@ -88,7 +105,6 @@ estado_walk.roda = function()
     }
 }
 #endregion
-
 
 #region Jump
 estado_jump.inicia = function()
@@ -122,7 +138,6 @@ estado_jump.roda = function()
 }
 #endregion
 
-
 #region Shot Idle
 estado_shot.inicia = function()
 {
@@ -142,7 +157,6 @@ estado_shot.roda = function()
     }
 }
 #endregion
-
 
 #region Shot Walk
 estado_shotwalk.inicia = function()
@@ -166,7 +180,6 @@ estado_shotwalk.roda = function()
         troca_estado(estado_shotjump);
 }
 #endregion
-
 
 #region Shot Jump
 estado_shotjump.inicia = function()
@@ -194,5 +207,74 @@ estado_shotjump.roda = function()
 }
 #endregion
 
+#region Dano
+
+estado_dano.inicia = function()
+{
+    sprite_index = sPulando;
+    image_index = 0;
+    image_speed = 1;
+
+	
+	 if (image_index >= image_number - 1)
+	 {
+        image_index = image_number - 1;
+        image_speed = 0;
+	
+    // define KB fixo estilo MegaMan
+    if (image_xscale > 0) {
+        kb_dir = 180; // empurra p/ esquerda
+    } else {
+        kb_dir = 0;   // empurra p/ direita
+    }
+
+	
+    kb_timer = 0.2 * room_speed;
+    kb_force = 5;
+
+    // ativa invencibilidade
+    inv_timer = 2 * room_speed;
+	 }
+}
+
+estado_dano.roda = function()
+{
+    if (_vidaPlayer <= 0) {
+        troca_estado(estado_morto);
+		_vidaPlayer = 0
+    }
+
+    if (kb_timer <= 0) {
+        if (no_chao) {
+            if (_left xor _right)
+                troca_estado(estado_walk);
+            else
+                troca_estado(estado_idle);
+        } else {
+            troca_estado(estado_jump);
+        }
+    }
+}
+#endregion
+
+#region Morto
+
+estado_morto.inicia = function()
+{
+    sprite_index = sMorto;
+    image_index = 0;
+    image_speed = 1;
+	timer_player = 3 * room_speed
+	
+}
+
+estado_morto.roda = function()
+{
+    if (image_index >= image_number - 1) {
+        image_index = image_number - 1;
+        image_speed = 0;
+	};
+}
+#endregion
 
 inicia_estado(estado_idle);

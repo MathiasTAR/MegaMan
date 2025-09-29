@@ -1,5 +1,5 @@
-if (pode_dano <= 0){
+if (inv_timer <= 0 and estado_atual != estado_morto){
 	instance_destroy(other)
-	_vidaPlayer -= 5;
-	pode_dano = 50
+	Dano_KB(2)
+	troca_estado(estado_dano);
 };

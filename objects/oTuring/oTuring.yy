@@ -4,16 +4,18 @@
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"oTuring",
   "overriddenProperties":[],
   "parent":{
-    "name":"IconBoss",
-    "path":"folders/Objetos/Menu/IconBoss.yy",
+    "name":"Boss",
+    "path":"folders/Objetos/Inimigos/Boss.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oInimigoPai",
+    "path":"objects/oInimigoPai/oInimigoPai.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sTuring",
-    "path":"sprites/sTuring/sTuring.yy",
+    "name":"sIdleTuning",
+    "path":"sprites/sIdleTuning/sIdleTuning.yy",
   },
   "spriteMaskId":null,
   "visible":true,

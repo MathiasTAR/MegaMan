@@ -1,7 +1,7 @@
 // Create
 
-image_xscale = 0.6
-image_yscale = 0.6
+image_xscale = 0.7
+image_yscale = 0.7
 
 spd = 4;
 alvo_x = oPlayer.x;

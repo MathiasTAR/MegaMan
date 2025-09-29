@@ -10,4 +10,4 @@ if (selecionado) {
 	yscale = lerp(yscale, botao_y_original * 1, 0.1);
 }
 
-if (keyboard_check_pressed(vk_enter) and selecionado) {room_goto(2)};
+if (keyboard_check_pressed(vk_enter) and selecionado) {room_goto(room1)};
