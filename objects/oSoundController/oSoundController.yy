@@ -1,22 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"oTuring",
+  "%Name":"oSoundController",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oTuring",
+  "name":"oSoundController",
   "overriddenProperties":[],
   "parent":{
-    "name":"Boss",
-    "path":"folders/Objetos/Inimigos/Boss.yy",
+    "name":"Objetos",
+    "path":"folders/Objetos.yy",
   },
-  "parentObjectId":{
-    "name":"oInimigoPai",
-    "path":"objects/oInimigoPai/oInimigoPai.yy",
-  },
-  "persistent":false,
+  "parentObjectId":null,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -33,13 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sIdleTuning",
-    "path":"sprites/sIdleTuning/sIdleTuning.yy",
-  },
-  "spriteMaskId":{
-    "name":"sIdleTuning",
-    "path":"sprites/sIdleTuning/sIdleTuning.yy",
-  },
+  "spriteId":null,
+  "spriteMaskId":null,
   "visible":true,
 }

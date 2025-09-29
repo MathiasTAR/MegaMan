@@ -6,7 +6,6 @@ vsmax = 9;
 
 //Vida
 _vidaPlayer = 100;
-_vidaPlayer = clamp(_vidaPlayer, 0, 100);
 
 // Knockback
 kb_timer = 0;
@@ -220,6 +219,7 @@ estado_dano.inicia = function()
 	 {
         image_index = image_number - 1;
         image_speed = 0;
+		oSoundController.sfx_dano.play = true
 	
     // define KB fixo estilo MegaMan
     if (image_xscale > 0) {
@@ -229,8 +229,8 @@ estado_dano.inicia = function()
     }
 
 	
-    kb_timer = 0.2 * room_speed;
-    kb_force = 5;
+    kb_timer = 0.1 * room_speed;
+    kb_force = 2;
 
     // ativa invencibilidade
     inv_timer = 2 * room_speed;

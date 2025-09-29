@@ -1,8 +1,10 @@
 // Inherit parent
 event_inherited();
 
+/// ==========================
 /// Variáveis principais
-padrao_ataque = ["Cobrir_tela", "Pena", "Ataque_rapido_Player"];
+/// ==========================
+padrao_ataque = ["Cobrir_tela", "Penas", "Ataque_rapido_Player"];
 
 ultimo_ataque = -1;
 ultimo_canto = -1;
@@ -10,13 +12,25 @@ ultimo_canto = -1;
 _estado = "Idle";
 fase_ataque = 0;
 
-cooldown_ataque = 5 * room_speed; // 5 seg entre ataques
-timer_fase = 0 * room_speed
+cooldown_ataque = 3 * room_speed; // 5 seg entre ataques
+timer_fase = 0;                   // usado nos ataques por fases
+penas_restantes = 0;              // só usado no ataque de penas
 
+// ==========================
 // Posições
+// ==========================
 pos_idle = [240, 100];
 pos_alvo = [x, y];
 
+// ==========================
+// Limites da room
+// ==========================
+limite_esq = 30;
+limite_dir = room_width - 30;
+
+// ==========================
+// Movimento
+// ==========================
 hs = 0;
 hsmax = 2;
 dir = 1;
@@ -28,13 +42,14 @@ mover_para = function (_x, _y, _vel) {
     return (point_distance(x, y, _x, _y) < 2);
 };
 
-#region Ataque
+/// ==========================
+/// Função de iniciar ataque
+/// ==========================
 ataque_boss = function() {
     if (cooldown_ataque <= 0 && _estado == "Idle") {
-		
-		ataque = true
         var ataque_escolhido = ultimo_ataque;
-		
+
+        // escolhe ataque diferente do último
         while (ataque_escolhido == ultimo_ataque) {
             ataque_escolhido = irandom(array_length(padrao_ataque) - 1);
         }
@@ -42,9 +57,9 @@ ataque_boss = function() {
 
         _estado = "Atacando";
         fase_ataque = 0;
+        timer_fase = 0;
 
         var ataque_atual = padrao_ataque[ataque_escolhido];
-
         show_debug_message(">>> Iniciando ataque: " + ataque_atual);
 
         switch (ataque_atual) {
@@ -63,7 +78,8 @@ ataque_boss = function() {
             break;
 
             case "Penas":
-                penas_restantes = 3;
+                penas_restantes = 3;            // número de rodadas
+                timer_fase = room_speed * 0.5;  // delay inicial antes da 1ª leva
             break;
 
             case "Ataque_rapido_Player":
@@ -76,4 +92,3 @@ ataque_boss = function() {
         }
     }
 };
-#endregion

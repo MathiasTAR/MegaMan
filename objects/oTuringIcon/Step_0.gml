@@ -10,4 +10,8 @@ if (selecionado) {
 	yscale = lerp(yscale, botao_y_original * 1, 0.1);
 }
 
-if (keyboard_check_pressed(vk_enter) and selecionado) {room_goto(Debug)};
+if (keyboard_check_pressed(vk_enter) and selecionado) {
+	oSoundController.sfx_botao_selecionado.play = true;
+	oSoundController.music_theme.play = true
+	room_goto(Debug);
+};

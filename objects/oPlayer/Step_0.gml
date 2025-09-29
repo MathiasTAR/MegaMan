@@ -29,8 +29,12 @@ roda_estado();
 
 // Virar Sprite
 if (hs != 0) oPlayer.image_xscale = sign(hs);
+x = clamp(x, 15, room_width  - 15);
+
 
 #region Controler Vertical
+
+if (_jump and no_chao){oSoundController.sfx_jump.play = true}
 // Verifica se está no chão
 no_chao = place_meeting(x, y + 2, _COLISION);
 
@@ -52,6 +56,7 @@ move_and_collide(0, vs, _COLISION, 20);
 if (_tiro && cooldown_tiro == 0) {
     var bullet = instance_create_layer(x, y+2, "Player", oBullet);
     bullet.image_xscale = image_xscale;
+	oSoundController.sfx_tiro.play = true
     cooldown_tiro = 8;
 }
 #endregion

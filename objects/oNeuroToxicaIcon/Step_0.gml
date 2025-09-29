@@ -10,5 +10,7 @@ if (selecionado) {
 	yscale = lerp(yscale, botao_y_original * 1, 0.1);
 }
 
-if (keyboard_check_pressed(vk_enter) and selecionado) {show_message("Não Suportado")};
-
+if (keyboard_check_pressed(vk_enter) and selecionado) {
+	oSoundController.sfx_botao_selecionado.play = true;
+	show_message("Não Suportado");
+};
