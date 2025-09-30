@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPenaTuning",
-    "path":"sprites/sPenaTuning/sPenaTuning.yy",
+    "name":"sPenaTuring",
+    "path":"sprites/sPenaTuring/sPenaTuring.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -30,6 +30,7 @@ roda_estado();
 // Virar Sprite
 if (hs != 0) oPlayer.image_xscale = sign(hs);
 x = clamp(x, 15, room_width  - 15);
+y = clamp(y, 0, room_height  + 30);
 
 
 #region Controler Vertical
@@ -81,8 +82,14 @@ if (timer_player <= 0 and _vidaPlayer = 0){
 	game_restart();
 };
 
+if (y >= room_height and _vidaPlayer != 0) {
+	_vidaPlayer = 0
+	troca_estado(estado_dano);
+}
+
+
 // Timers
-if (cooldown_tiro > 0) {cooldown_tiro --};
+if (cooldown_tiro > 0) {cooldown_tiro --}
 if (inv_time > 0) {inv_time --}
 if (timer_player > 0) {timer_player --}
 

@@ -1,19 +1,21 @@
-// Inherit parent
-event_inherited();
-
 /// ==========================
 /// Variáveis principais
 /// ==========================
-padrao_ataque = ["Cobrir_tela", "Penas", "Ataque_rapido_Player"];
+padrao_ataque = ["Penas", "Penas", "Penas"];
+
+_vidaBoss = 100
 
 ultimo_ataque = -1;
 ultimo_canto = -1;
 
-_estado = "Idle";
+_estado = "Intro";
 fase_ataque = 0;
+fase_morte = 0
 
-cooldown_ataque = 3 * room_speed; // 5 seg entre ataques
-timer_fase = 0;                   // usado nos ataques por fases
+tempo_morte = 0 * room_speed; // 5 seg entre ataques
+
+cooldown_ataque = 3.5 * room_speed; // 3.5 seg entre ataques
+timer_fase = 0;               // usado nos ataques por fases
 penas_restantes = 0;              // só usado no ataque de penas
 
 // ==========================
@@ -71,14 +73,14 @@ ataque_boss = function() {
                 ultimo_canto = canto;
 
                 switch (canto) {
-                    case 0: pos_alvo = [80, 105]; break;   // esquerda
-                    case 1: pos_alvo = [240, 105]; break;  // meio
-                    case 2: pos_alvo = [400, 105]; break;  // direita
+                    case 0: pos_alvo = [80, 75]; break;   // esquerda
+                    case 1: pos_alvo = [240, 75]; break;  // meio
+                    case 2: pos_alvo = [400, 75]; break;  // direita
                 }
             break;
 
             case "Penas":
-                penas_restantes = 3;            // número de rodadas
+                penas_restantes = 5;            // número de rodadas
                 timer_fase = room_speed * 0.5;  // delay inicial antes da 1ª leva
             break;
 
