@@ -33,7 +33,7 @@
   "origin":4,
   "parent":{
     "name":"atacandopena",
-    "path":"folders/Sprites/CHEFE TUNING/atacandopena.yy",
+    "path":"folders/Sprites/Boss/ChefeTuring/atacandopena.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

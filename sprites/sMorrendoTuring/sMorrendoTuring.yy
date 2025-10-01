@@ -31,7 +31,7 @@
   "origin":4,
   "parent":{
     "name":"morrendo",
-    "path":"folders/Sprites/CHEFE TUNING/morrendo.yy",
+    "path":"folders/Sprites/Boss/ChefeTuring/morrendo.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

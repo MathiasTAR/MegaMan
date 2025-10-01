@@ -1,7 +1,7 @@
 // Inicializa câmera e visibilidade das layers
 cameraInit();
 
-was_selected = false;
+selecionando_antes = false;
 
 
 // Tamanho original do botão

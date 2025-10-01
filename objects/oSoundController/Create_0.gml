@@ -1,7 +1,7 @@
 // Create oSoundController
 global.VOL_SFX = 1;
 global.VOL_MUSIC = 1;
-global.VOL_MASTER = 0.2;
+global.VOL_MASTER = 1;
 
 audio_controller = new AudioController("VOL_SFX", "VOL_MUSIC", "VOL_MASTER");
 

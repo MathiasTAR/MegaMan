@@ -1,7 +1,7 @@
 /// ==========================
 /// Variáveis principais
 /// ==========================
-padrao_ataque = ["Cobrir_tela", "Cobrir_tela", "Cobrir_tela"];
+padrao_ataque = ["Cobrir_tela", "Penas", "Ataque_rapido_Player"];
 
 _vidaBoss = 100
 x = 435;

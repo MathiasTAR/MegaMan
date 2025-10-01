@@ -103,6 +103,6 @@ roda_estado();
 
 if (sala1) {room_goto(room1)}
 else if (sala2) {room_goto(room2)}
-else if (sala3) {room_goto(room3)}
+else if (sala3) {room_goto(Room_Tribuna)}
 else if (sala4) {room_goto(room4)}
 else if (sala0) {room_goto(Debug)}

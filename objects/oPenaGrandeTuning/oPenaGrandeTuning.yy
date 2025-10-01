@@ -8,8 +8,8 @@
   "name":"oPenaGrandeTuning",
   "overriddenProperties":[],
   "parent":{
-    "name":"Boss",
-    "path":"folders/Objetos/Inimigos/Boss.yy",
+    "name":"Turing",
+    "path":"folders/Objetos/Inimigos/Boss/Turing.yy",
   },
   "parentObjectId":null,
   "persistent":false,

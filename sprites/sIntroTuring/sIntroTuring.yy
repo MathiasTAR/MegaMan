@@ -31,8 +31,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"CHEFE TUNING",
-    "path":"folders/Sprites/CHEFE TUNING.yy",
+    "name":"ChefeTuring",
+    "path":"folders/Sprites/Boss/ChefeTuring.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

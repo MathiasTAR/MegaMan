@@ -9,7 +9,7 @@ yscale = lerp(yscale, botao_y_original, 0.09);
 var selecionado = (posicao == controler.botao_selecionado);
 
 // Detecta transição (quando passa a ser selecionado)
-if (selecionado && !was_selected) {
+if (selecionado && !selecionando_antes) {
     oSoundController.sfx_botao.play = true;
 }
 
@@ -28,4 +28,4 @@ if (keyboard_check_pressed(vk_enter) or gamepad_button_check_pressed(global.game
 }
 
 // Guarda estado para o próximo step
-was_selected = selecionado;
+selecionando_antes = selecionado;

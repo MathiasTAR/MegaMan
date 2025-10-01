@@ -65,10 +65,10 @@
                         {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBotao_menu","path":"objects/oBotao_menu/oBotao_menu.yy",},"propertyId":{"name":"posicao","path":"objects/oBotao_menu/oBotao_menu.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
                       ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.8,"scaleY":0.7,"x":0.0,"y":0.0,},
                   ],"flexDirection":0,"height":{"unit":3,"value":100.0,},"justifyContent":1,"name":"SFX","nodeColour":4292997704,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":100.0,},},
-              ],"flexDirection":0,"gapRow":6.0,"height":{"unit":3,"value":70.0,},"justifyContent":1,"marginTop":{"unit":1,"value":30.0,},"name":"Opcao","nodeColour":4282970776,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":64.0,},},
+              ],"flexDirection":0,"gapRow":6.0,"height":{"unit":3,"value":70.0,},"justifyContent":1,"name":"Opcao","nodeColour":4282970776,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":64.0,},},
             {"$GMRFlexPanel":"","%Name":"Titulo","alignItems":2,"alignSelf":2,"children":[
                 {"$GMRTextItem":"v2","%Name":"text_36A97022","alignment":0,"charSpacing":0.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"fontId":{"name":"Tela","path":"fonts/Tela/Tela.yy",},"frameH":0.0,"frameW":0.0,"frozen":false,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"lineSpacing":0.0,"name":"text_36A97022","paragraphSpacing":0.0,"resourceType":"GMRTextItem","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"text":"Opções","wrap":false,"x":0.0,"xorigin":0.0,"y":0.0,"yorigin":0.0,},
-              ],"flexDirection":0,"height":{"unit":3,"value":23.0,},"justifyContent":1,"name":"Titulo","nodeColour":4282932210,"positionTop":{"unit":2,"value":3.0,},"positionType":2,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":151.0,},},
+              ],"flexDirection":0,"height":{"unit":3,"value":23.0,},"justifyContent":1,"name":"Titulo","nodeColour":4282932210,"positionTop":{"unit":2,"value":4.0,},"positionType":2,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":151.0,},},
             {"$GMRFlexPanel":"","%Name":"Voltar","alignItems":2,"alignSelf":3,"children":[
                 {"$GMRFlexPanel":"","%Name":"Texto","alignItems":2,"children":[
                     {"$GMRTextItem":"v2","%Name":"text_571D907E","alignment":0,"charSpacing":0.0,"colour":16777215,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"fontId":{"name":"Botao","path":"fonts/Botao/Botao.yy",},"frameH":0.0,"frameW":0.0,"frozen":false,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"lineSpacing":0.0,"name":"text_571D907E","paragraphSpacing":0.0,"resourceType":"GMRTextItem","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"text":"Voltar","wrap":false,"x":0.0,"xorigin":0.0,"y":0.0,"yorigin":0.0,},
@@ -91,5 +91,5 @@
   "resourceType":"GMRoomUI",
   "resourceVersion":"2.0",
   "viewspaceChildren":[],
-  "visible":true,
+  "visible":false,
 }
