@@ -1,6 +1,9 @@
 // Controles de seleção
-if (keyboard_check_pressed(vk_down)) {
+if (keyboard_check_pressed(vk_down) || gamepad_button_check_pressed(global.gamepad_id, gp_padd)) {
     botao_selecionado++;
+}
+else if (keyboard_check_pressed(vk_up) || gamepad_button_check_pressed(global.gamepad_id, gp_padu)) {
+    botao_selecionado--;
 }
 
 // Pega o array de botões do menu atual

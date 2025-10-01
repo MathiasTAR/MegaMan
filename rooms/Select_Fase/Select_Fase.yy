@@ -29,8 +29,8 @@
   ],
   "name":"Select_Fase",
   "parent":{
-    "name":"Cenas",
-    "path":"folders/Cenas.yy",
+    "name":"Menu",
+    "path":"folders/Cenas/Menu.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

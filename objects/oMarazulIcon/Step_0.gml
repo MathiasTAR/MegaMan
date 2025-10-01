@@ -10,7 +10,7 @@ if (selecionado) {
 	yscale = lerp(yscale, botao_y_original * 1, 0.1);
 }
 
-if (keyboard_check_pressed(vk_enter) and selecionado) {
+if ((keyboard_check_pressed(vk_enter) or gamepad_button_check_pressed(global.gamepad_id, gp_start)) and selecionado) {
 	oSoundController.sfx_botao_selecionado.play = true;
 	oSoundController.music_theme.play = true
 	room_goto(room3);

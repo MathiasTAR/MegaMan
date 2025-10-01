@@ -2,6 +2,7 @@ var _COLISION = layer_tilemap_get_id("tl_cenario");
 
 if (_vidaBoss <= 0) {_vidaBoss = 0; _estado = "Morto"}
 
+
 // ==========================
 // ESTADOS
 // ==========================
@@ -89,22 +90,22 @@ else if (_estado == "Atacando") {
                 break;
 
                 case 1: // Sobe
-                    if (mover_para(pos_alvo[0], -300, 0.08)) {
-                        var pena = instance_create_layer(pos_alvo[0], -200, "Ataques", oPenaGrandeTuning);
-                        pena.image_xscale = 6;
-                        pena.image_yscale = 20;
+                    if (mover_para(pos_alvo[0], -500, 0.08)) {
+                        var pena = instance_create_layer(pos_alvo[0], -10, "Ataques", oPenaGrandeTuning);
+                        pena.image_xscale = 1.25;
+                        pena.image_yscale = 10
                         image_yscale = -1;
                         fase_ataque = 2;
                     }
                 break;
 
                 case 2: // Desce
-                    if (mover_para(pos_alvo[0], 400, 0.05)) {
+                    if (mover_para(pos_alvo[0], 400, 0.03)) {
                         fase_ataque = 3;
                         x = 240;
                         y = -60;
                         image_yscale = 1;
-                        timer_fase = room_speed * 1.5; // pausa de 1,5 seg
+                        timer_fase = room_speed * 1.1; // pausa de 1,5 seg
                     }
                 break;
 
@@ -208,7 +209,7 @@ else if (_estado == "Atacando") {
 		        break;
 
 		        case 1: // Investida rápida
-		            if (mover_para(pos_alvo[0], pos_alvo[1], 0.09)) {
+		            if (mover_para(pos_alvo[0], pos_alvo[1], 0.07)) {
 			            fase_ataque = 2;
 		            }
 		        break;
@@ -228,9 +229,47 @@ else if (_estado == "Atacando") {
 }
 
 else if (_estado == "Intro"){
-	
+	image_xscale = -1
+	switch (fase_intro) {
+		case 0:
+			sprite_index = sIntroTuring
+			fase_intro = 1
+		break;
+		
+		case 1:
+			if (timer_fase >= 0) {timer_fase --}
+			else {
+				sprite_index = sIdleTuring
+				if (mover_para(x, 75, 0.07)) {fase_intro = 2}
+			}
+		break;
+		
+		case 2: // Volta pro Idle
+			if (mover_para(pos_idle[0], pos_idle[1], 0.05)) {
+			_estado = "Idle";
+			sprite_index = sIdleTuring;
+			image_yscale = 1;
+			image_speed = 1;
+			cooldown_ataque = room_speed * 2.3;
+			}
+		break;
+	}
 }
+	
+	
+	
+// Piscar vermelho
+if (inv_timer > 0) {
+    if (inv_timer div 4) mod 8 {
+        image_blend = c_gray;   // vermelho
+    }else {image_blend = c_white} // reseta a cor
+} else {
+    image_blend = c_white; // reseta a cor
+}
+
 // ==========================
 // COOLDOWN
 // ==========================
 if (cooldown_ataque > 0) {cooldown_ataque--;};
+
+if (inv_timer > 0) {inv_timer--;}

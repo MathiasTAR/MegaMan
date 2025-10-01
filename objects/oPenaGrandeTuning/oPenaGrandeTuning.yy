@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPenaTuring",
-    "path":"sprites/sPenaTuring/sPenaTuring.yy",
+    "name":"sPenagrande",
+    "path":"sprites/sPenagrande/sPenagrande.yy",
   },
   "spriteMaskId":null,
   "visible":true,

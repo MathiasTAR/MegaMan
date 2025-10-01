@@ -1,9 +1,11 @@
 /// ==========================
 /// Variáveis principais
 /// ==========================
-padrao_ataque = ["Penas", "Penas", "Penas"];
+padrao_ataque = ["Cobrir_tela", "Cobrir_tela", "Cobrir_tela"];
 
 _vidaBoss = 100
+x = 435;
+y = 155
 
 ultimo_ataque = -1;
 ultimo_canto = -1;
@@ -11,11 +13,14 @@ ultimo_canto = -1;
 _estado = "Intro";
 fase_ataque = 0;
 fase_morte = 0
+fase_intro = 0;
 
-tempo_morte = 0 * room_speed; // 5 seg entre ataques
+tempo_morte = 0 * room_speed
+
+inv_timer = 0;
 
 cooldown_ataque = 3.5 * room_speed; // 3.5 seg entre ataques
-timer_fase = 0;               // usado nos ataques por fases
+timer_fase = 2 * room_speed;               // usado nos ataques por fases
 penas_restantes = 0;              // só usado no ataque de penas
 
 // ==========================

@@ -4,7 +4,7 @@ botao_selecionado = 0;
 
 // Arrays de botões
 menu_botoes   = ["Jogar", "Opcao", "Sair"];
-opcoes_botoes = ["Voltar"];
+opcoes_botoes = ["Voltar", "Master", "Music", "SFX"];
 
 // Inicializa layers
 layer_set_visible("ui_menu", 0);
@@ -22,8 +22,8 @@ botao_acao = function(acao) {
             room_goto_next();
             break;
 
-        case "Opcao":
-            menu_atual = "opcoes";
+        case "Opção":
+            menu_atual = "Opção";
             botao_selecionado = 0;
             layer_set_visible("ui_menu", 0);
             layer_set_visible("ui_opcoes", 1);
@@ -39,5 +39,6 @@ botao_acao = function(acao) {
             layer_set_visible("ui_opcoes", 0);
             layer_set_visible("ui_menu", 1);
             break;
+			
     }
 };

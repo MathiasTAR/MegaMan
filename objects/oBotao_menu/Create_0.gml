@@ -10,4 +10,4 @@ botao_y_original = image_yscale;
 xscale = botao_x_original;
 yscale = botao_y_original;
 
-
+	

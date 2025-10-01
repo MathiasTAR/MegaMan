@@ -10,10 +10,6 @@
     {"name":"inst_7325D0AF","path":"rooms/Room_Turing/Room_Turing.yy",},
     {"name":"inst_2CC682F0","path":"rooms/Room_Turing/Room_Turing.yy",},
     {"name":"inst_63948145","path":"rooms/Room_Turing/Room_Turing.yy",},
-    {"name":"inst_356E86E","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_76B5102C","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_364E97DA","path":"roomui/RoomUI/RoomUI.yy",},
-    {"name":"inst_10AEB361","path":"roomui/RoomUI/RoomUI.yy",},
   ],
   "isDnd":false,
   "layers":[

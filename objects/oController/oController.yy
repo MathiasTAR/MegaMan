@@ -10,8 +10,8 @@
   "name":"oController",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"controllers",
+    "path":"folders/Objetos/controllers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

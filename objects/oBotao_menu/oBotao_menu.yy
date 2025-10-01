@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Menu",
-    "path":"folders/Objetos/Inimigos/Boss/Menu.yy",
+    "path":"folders/Objetos/Menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,9 +30,12 @@
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"acao","filters":[],"listItems":[
         "\"Jogar\"",
-        "\"Opcao\"",
+        "\"Opção\"",
         "\"Sair\"",
         "\"Voltar\"",
+        "\"Volume Master\"",
+        "\"Volume Música\"",
+        "\"Volume SFX\"",
       ],"multiselect":false,"name":"acao","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"Jogar\"","varType":6,},
     {"$GMObjectProperty":"v1","%Name":"posicao","filters":[],"listItems":[],"multiselect":false,"name":"posicao","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
   ],

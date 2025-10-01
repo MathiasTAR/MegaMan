@@ -1,4 +1,4 @@
-var spd = 5.3;
+var spd = 8;
 
 y += spd;
 

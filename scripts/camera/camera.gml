@@ -38,20 +38,22 @@ function cameraUPD() {
     var _cameraX = camera_get_view_x(view_camera[0]);
     var _cameraY = camera_get_view_y(view_camera[0]);
 
-    var _targetX = oPlayer.x - (global.cameraWidth * 0.5);
-    var _targetY = oPlayer.y - (global.cameraHeight * 0.5);
+	if (instance_exists(oPlayer)){
+	    var _targetX = oPlayer.x - (global.cameraWidth * 0.5);
+	    var _targetY = oPlayer.y - (global.cameraHeight * 0.5);
 
-    // Limites
-    _targetX = clamp(_targetX, 0, room_width  - global.cameraWidth);
-    _targetY = clamp(_targetY, 0, room_height - global.cameraHeight);
+	    // Limites
+	    _targetX = clamp(_targetX, 0, room_width  - global.cameraWidth);
+	    _targetY = clamp(_targetY, 0, room_height - global.cameraHeight);
 
-    // Suavização (0.2 = velocidade do "follow")
-    var _newX = lerp(_cameraX, _targetX, 1);
-    var _newY = lerp(_cameraY, _targetY, 1);
+	    // Suavização (0.2 = velocidade do "follow")
+	    var _newX = lerp(_cameraX, _targetX, 1);
+	    var _newY = lerp(_cameraY, _targetY, 1);
 
-    // Travar em inteiros → evita borrão nos pixels
-    _newX = floor(_newX);
-    _newY = floor(_newY);
+	    // Travar em inteiros → evita borrão nos pixels
+	    _newX = floor(_newX);
+	    _newY = floor(_newY);
 
-    camera_set_view_pos(view_camera[0], _newX, _newY);
+	    camera_set_view_pos(view_camera[0], _newX, _newY);
+	}
 }

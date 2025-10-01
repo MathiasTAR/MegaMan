@@ -6,10 +6,11 @@ if (_vidaPlayer = 0) {hs = 0}
 #region Inputs e Controler Horizontal
 // Inputs
 if (_vidaPlayer != 0){
-	_right  = keyboard_check(vk_right);
-	_left   = keyboard_check(vk_left);
-	_jump   = keyboard_check_pressed(vk_up) || keyboard_check_pressed(vk_space);
-	_tiro   = keyboard_check_pressed(ord("Z"));
+	_right  = keyboard_check(vk_right) || gamepad_axis_value(global.gamepad_id, gp_axislh) > global.gamepad_deadzone
+	_left   = keyboard_check(vk_left) || gamepad_axis_value(global.gamepad_id, gp_axislh) < -global.gamepad_deadzone
+	_jump   = keyboard_check_pressed(vk_up) || keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(0, gp_face1);
+	_jump_hold   = keyboard_check(vk_up) || keyboard_check(vk_space) || gamepad_button_check(0, gp_face1);
+	_tiro   = keyboard_check_pressed(ord("Z")) || gamepad_button_check(0, gp_face2);
 	
 	// COlisão e movimento horizontal
 	hs = (_right - _left) * hsmax;
@@ -47,6 +48,10 @@ if (!no_chao && estado_atual != estado_dano) {
     if (_jump) {
         vs = -vsmax;
     }
+}
+
+if (!_jump_hold and vs < 0){
+	vs = max(vs, -hsmax / 2)
 }
 
 // Colisão Vertical

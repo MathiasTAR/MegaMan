@@ -29,6 +29,7 @@ cooldown_tiro = 0;
 _left  = noone;
 _right = noone
 _jump  = noone
+_jump_hold = noone
 _tiro  = noone
 
 

@@ -9,8 +9,8 @@
   "name":"oControlerMenu",
   "overriddenProperties":[],
   "parent":{
-    "name":"Menu",
-    "path":"folders/Objetos/Inimigos/Boss/Menu.yy",
+    "name":"controllers",
+    "path":"folders/Objetos/controllers.yy",
   },
   "parentObjectId":null,
   "persistent":true,
