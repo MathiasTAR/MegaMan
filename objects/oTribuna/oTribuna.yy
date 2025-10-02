@@ -36,9 +36,6 @@
     "name":"sIdleTribuna",
     "path":"sprites/sIdleTribuna/sIdleTribuna.yy",
   },
-  "spriteMaskId":{
-    "name":"sIdleTribuna",
-    "path":"sprites/sIdleTribuna/sIdleTribuna.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }

@@ -68,7 +68,7 @@ else if (_estado == "Idle") {
     image_xscale = dir;
 
     // Chamar ataque quando cooldown acabar
-    if (cooldown_ataque <= 0 && _vidaBoss > 0) {
+    if (cooldown_ataque <= 0 && _vidaBoss > 0 && oPlayer._vidaPlayer > 0) {
         ataque_boss();
     }
 }

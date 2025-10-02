@@ -46,7 +46,5 @@ if (selecionado && _dir != 0) {
 	
 }
 
-show_debug_message(global.VOL_MASTER)
-
 // Guarda estado para o próximo step
 selecionando_antes = selecionado;

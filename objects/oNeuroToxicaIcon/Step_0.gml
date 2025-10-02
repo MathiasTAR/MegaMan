@@ -12,5 +12,5 @@ if (selecionado) {
 
 if ((keyboard_check_pressed(vk_enter) or gamepad_button_check_pressed(global.gamepad_id, gp_start))  and selecionado) {
 	oSoundController.sfx_botao_selecionado.play = true;
-	show_message("Não Suportado");
+	room_goto(Debug)
 };

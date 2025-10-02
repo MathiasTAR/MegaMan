@@ -1,11 +1,10 @@
 /// ==========================
 /// Variáveis principais
 /// ==========================
-padrao_ataque = ["Dash", "Dash", "Dash"];
+padrao_ataque = ["Dash", "Espadas_Baixo"];
 
 _vidaBoss = 100;
 
-image_xscale = -1;
 x = 239.5;
 y = 168;
 
@@ -19,6 +18,7 @@ fase_intro = 0;
 
 tempo_morte = 0 * room_speed;
 
+vuneravel = true;
 inv_timer = 0;
 
 cooldown_ataque = 3.5 * room_speed; // 3.5 seg entre ataques
@@ -71,7 +71,6 @@ ataque_boss = function() {
         timer_fase = 0;
 
         var ataque_atual = padrao_ataque[ataque_escolhido];
-        show_debug_message(">>> Iniciando ataque: " + ataque_atual);
 
         switch (ataque_atual) {
             case "Dash":
@@ -90,9 +89,17 @@ ataque_boss = function() {
 
             break;
 
-            case "Penas":
-                penas_restantes = 5;
-                timer_fase = room_speed * 0.5;
+            case "Espadas_Baixo":
+				canto = ultimo_canto;
+                while (canto == ultimo_canto) {
+                    canto = irandom(1);
+                }
+                ultimo_canto = canto;
+
+                switch (canto) {
+                    case 0: pos_alvo = [65, 128]; canto_escolhido = "esquerda_cima"; break;
+                    case 1: pos_alvo = [415, 128]; canto_escolhido = "direita_cima"; break;
+                }
             break;
 
             case "Ataque_rapido_Player":
