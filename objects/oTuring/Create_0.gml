@@ -67,7 +67,6 @@ ataque_boss = function() {
         timer_fase = 0;
 
         var ataque_atual = padrao_ataque[ataque_escolhido];
-        show_debug_message(">>> Iniciando ataque: " + ataque_atual);
 
         switch (ataque_atual) {
             case "Cobrir_tela":

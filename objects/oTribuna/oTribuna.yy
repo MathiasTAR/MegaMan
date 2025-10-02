@@ -2,16 +2,17 @@
   "$GMObject":"",
   "%Name":"oTribuna",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oBullet","path":"objects/oBullet/oBullet.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"oTribuna",
   "overriddenProperties":[],
   "parent":{
-    "name":"IconBoss",
-    "path":"folders/Objetos/Menu/IconBoss.yy",
+    "name":"Tribuna",
+    "path":"folders/Objetos/Inimigos/Boss/Tribuna.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,9 +33,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sTribuna",
-    "path":"sprites/sTribuna/sTribuna.yy",
+    "name":"sIdleTribuna",
+    "path":"sprites/sIdleTribuna/sIdleTribuna.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"sIdleTribuna",
+    "path":"sprites/sIdleTribuna/sIdleTribuna.yy",
+  },
   "visible":true,
 }
