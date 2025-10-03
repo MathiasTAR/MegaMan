@@ -47,8 +47,8 @@ function cameraUPD() {
 	    _targetY = clamp(_targetY, 0, room_height - global.cameraHeight);
 
 	    // Suavização (0.2 = velocidade do "follow")
-	    var _newX = lerp(_cameraX, _targetX, 1);
-	    var _newY = lerp(_cameraY, _targetY, 1);
+	    var _newX = lerp(_cameraX, _targetX, 0.2);
+	    var _newY = lerp(_cameraY, _targetY, 0.2);
 
 	    // Travar em inteiros → evita borrão nos pixels
 	    _newX = floor(_newX);

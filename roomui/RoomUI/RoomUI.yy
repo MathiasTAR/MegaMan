@@ -43,7 +43,7 @@
               ],"flexDirection":0,"gapRow":6.0,"height":{"unit":3,"value":80.0,},"justifyContent":1,"name":"Botoes","nodeColour":4282970795,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":2,"value":95.0,},},
             {"$GMRSpriteGraphic":"v1","%Name":"graphic_9E0713E","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":4,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_9E0713E","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"MenuBg","path":"sprites/MenuBg/MenuBg.yy",},"x":0.0,"y":0.0,},
           ],"flexDirection":0,"height":{"unit":2,"value":50.0,},"justifyContent":1,"marginRight":{"unit":1,"value":30.0,},"name":"MenuEscolha","nodeColour":4294080840,"positionType":2,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":2,"value":35.0,},},
-      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"ui_menu","nodeColour":4282927602,"resourceType":"GMRUILayer","resourceVersion":"2.0","visible":false,},
+      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"ui_menu","nodeColour":4282927602,"resourceType":"GMRUILayer","resourceVersion":"2.0",},
     {"$GMRUILayer":"v1","%Name":"ui_opcoes","alignItems":2,"children":[
         {"$GMRFlexPanel":"","%Name":"Fundo","alignItems":2,"alignSelf":2,"children":[
             {"$GMRFlexPanel":"","%Name":"Titulo","alignItems":2,"alignSelf":2,"children":[
@@ -89,7 +89,7 @@
               ],"flexDirection":0,"height":{"unit":3,"value":38.0,},"justifyContent":1,"marginBottom":{"unit":1,"value":15.0,},"marginRight":{"unit":1,"value":15.0,},"name":"Voltar","nodeColour":4294071880,"paddingBottom":{"unit":1,"value":9.0,},"paddingLeft":{"unit":1,"value":9.0,},"paddingRight":{"unit":1,"value":9.0,},"paddingTop":{"unit":1,"value":9.0,},"positionTop":{"unit":2,"value":77.5,},"positionType":2,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":38.0,},},
             {"$GMRSpriteGraphic":"v1","%Name":"graphic_32D76D6A","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":4,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_32D76D6A","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"MenuBg","path":"sprites/MenuBg/MenuBg.yy",},"x":0.0,"y":0.0,},
           ],"flexDirection":0,"height":{"unit":2,"value":80.0,},"justifyContent":1,"name":"Fundo","nodeColour":4294080840,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":2,"value":70.0,},},
-      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"ui_opcoes","nodeColour":4282970703,"resourceType":"GMRUILayer","resourceVersion":"2.0",},
+      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"ui_opcoes","nodeColour":4282970703,"resourceType":"GMRUILayer","resourceVersion":"2.0","visible":false,},
   ],
   "locked":false,
   "name":"RoomUI",

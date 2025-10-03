@@ -1,15 +1,18 @@
 /// ==========================
 /// Variáveis principais
 /// ==========================
-padrao_ataque = ["Dash", "Espadas_Baixo"];
+padrao_ataque = ["Espada_Cima", "Espada_Cima"];
 
 _vidaBoss = 100;
 
 x = 239.5;
 y = 168;
 
-ultimo_ataque = -1;
-ultimo_canto = -1;
+ultimo_ataque   = -1;
+ultimo_canto    = -1;
+ultimo_espada   = -1;
+espadas_cima    = [];
+
 
 _estado = "Intro";
 fase_ataque = 0;
@@ -102,12 +105,12 @@ ataque_boss = function() {
                 }
             break;
 
-            case "Ataque_rapido_Player":
-                if (instance_exists(oPlayer)) {
-                    pos_alvo = [oPlayer.x, oPlayer.y];
-                } else {
-                    pos_alvo = pos_idle;
+            case "Espada_Cima":
+				_espada_cima = ultimo_espada;
+                while (_espada_cima == ultimo_espada) {
+                    _espada_cima = irandom(3);
                 }
+                ultimo_espada = _espada_cima;
             break;
         }
     }

@@ -21,9 +21,9 @@ if (_estado == "Morto") {
 				image_index = image_number - 1;
 				image_speed = 0;
 				
-				if (tempo_morte > 0) {tempo--}
+				if (tempo_morte > 0) {tempo_morte--}
 				else{instance_destroy()}
-			}
+			};
 			
         break;
     }
@@ -36,13 +36,13 @@ else if (_estado == "Idle") {
     sprite_index = sIdleTribuna;
 
     // Chamar ataque (temporário: tecla de debug)
-    //if (keyboard_check_pressed(vk_control)) {
-    //    ataque_boss();
-    //}
-	
-	if (cooldown_ataque <= 0 && _vidaBoss > 0 && oPlayer._vidaPlayer > 0) {
+    if (keyboard_check_pressed(vk_control)) {
         ataque_boss();
     }
+	
+	//if (cooldown_ataque <= 0 && _vidaBoss > 0 && oPlayer._vidaPlayer > 0) {
+        //ataque_boss();
+    //}
 	
 }
 
@@ -199,7 +199,6 @@ else if (_estado == "Atacando") {
 
 		                // Cria espada no centro e guarda referência
 		                espada_baixo1 = instance_create_layer(240, 310, "Ataques", oEspadaTribuna);
-						espada_baixo1 = instance_create_layer(240, 310, "Ataques", oEspadaTribuna);
 		                espada_baixo1.image_xscale = 24;
 		                espada_baixo1.y = 310;
 
@@ -265,8 +264,112 @@ else if (_estado == "Atacando") {
 		break;
 
 
-        case "Ataque_rapido_Player":
-            // <<<--- investida rápida code aqui (igual ao seu)
+		case "Espada_Cima":
+			switch (fase_ataque){
+				// Animação de preparação
+				case 0:
+					if (sprite_index != sAtaqueTribunaEspada){
+		                sprite_index = sAtaqueTribunaEspada;
+		                image_speed = 1; 
+		            }
+		            else if (image_index >= image_number - 1) {
+		                image_index = image_number - 1;
+		                image_speed = 0;
+						fase_ataque = 1;
+					}
+				break;
+				
+				// Cria as espadas dependendo da variação escolhida
+				case 1:
+					switch (_espada_cima){
+						case 0:
+					        array_push(espadas_cima, instance_create_layer(60, -50, "Fx", oEspadaTribuna));
+					        array_push(espadas_cima, instance_create_layer(240, -50, "Fx", oEspadaTribuna));
+					        array_push(espadas_cima, instance_create_layer(420, -50, "Fx", oEspadaTribuna));
+							
+							espadas_cima[0].image_xscale = 6;
+							espadas_cima[1].image_xscale = 6;
+							espadas_cima[2].image_xscale = 6;
+							
+							espadas_cima[0].image_yscale = -1;
+							espadas_cima[1].image_yscale = -1;
+							espadas_cima[2].image_yscale = -1;
+							
+						break;
+						
+						case 1:
+							array_push(espadas_cima, instance_create_layer(150, -50, "Fx", oEspadaTribuna));
+					        array_push(espadas_cima, instance_create_layer(330, -50, "Fx", oEspadaTribuna));
+							
+							espadas_cima[0].image_xscale = 6;
+							espadas_cima[1].image_xscale = 6;
+							espadas_cima[0].image_yscale = -1;
+							espadas_cima[1].image_yscale = -1;
+						break;
+						
+						case 2:
+							array_push(espadas_cima, instance_create_layer(120, -50, "Fx", oEspadaTribuna));
+							
+							espadas_cima[0].image_xscale = 12;
+							espadas_cima[0].image_yscale = -1;
+						break;
+						
+						case 3:
+					        array_push(espadas_cima, instance_create_layer(360, -50, "Fx", oEspadaTribuna));
+							
+							espadas_cima[0].image_xscale = 12;
+							espadas_cima[0].image_yscale = -1;
+						break;
+						
+						case 4:
+							array_push(espadas_cima, instance_create_layer(100, -50, "Fx", oEspadaTribuna));
+					        array_push(espadas_cima, instance_create_layer(378, -50, "Fx", oEspadaTribuna));
+							
+							espadas_cima[0].image_xscale = 10;
+							espadas_cima[1].image_xscale = 10;
+							espadas_cima[0].image_yscale = -1;
+							espadas_cima[1].image_yscale = -1;
+						break;
+						
+					}
+					
+					fase_ataque = 2;
+				break;
+				
+				// Espadas descendo
+				case 2:
+					var todas_no_chao = true;
+					
+					for (var i = 0; i < array_length(espadas_cima); i++){
+						if (espadas_cima[i].y < 300){
+							espadas_cima[i].y += 5.2;
+							todas_no_chao = false;
+						}
+					}
+					
+					if (todas_no_chao){
+						fase_ataque = 3;
+					}
+				break;
+				
+				// Espadas subindo e destruindo
+				case 3:
+					var todas_sumiram = true;
+					
+					if (todas_sumiram){
+						espadas_cima = [];
+						fase_ataque = 4;
+					}
+				break;
+				
+				// Volta pro Idle
+				case 4:
+					if (mover_para(pos_idle[0], pos_idle[1], 0.08)) {
+		                cooldown_ataque = 1.5 * room_speed;
+		                _estado = "Idle";
+		            }
+				break;
+			}
         break;
     }
 }
