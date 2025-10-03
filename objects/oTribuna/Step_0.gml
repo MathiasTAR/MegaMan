@@ -69,7 +69,7 @@ switch (_estado) {
                             image_index = image_number - 1;
                             image_speed = 0;
                 
-                            if (mover_para(pos_idle[0], -100, 0.05)) {
+                            if (mover_para(pos_idle[0], -100, 0.07)) {
                                 fase_ataque = 1;
                             }
                         }
@@ -92,7 +92,7 @@ switch (_estado) {
 
                     case 2:
                         // Entra devagar na tela vindo do canto
-                        if (mover_para(pos_alvo[0], pos_alvo[1], 0.1)) {
+                        if (mover_para(pos_alvo[0], pos_alvo[1], 0.12)) {
                             if (sprite_index != sTribunaDash){
                                 sprite_index = sTribunaDash;
                                 image_speed = 1;
@@ -154,7 +154,7 @@ switch (_estado) {
 				
                     case 5:
                         // Volta para a posição idle
-                        if (mover_para(pos_idle[0], pos_idle[1], 0.07)){
+                        if (mover_para(pos_idle[0], pos_idle[1], 0.09)){
 							sprite_index = sIdleTribuna;
 							image_speed = 1;
                             _estado = "Idle";
@@ -178,7 +178,7 @@ switch (_estado) {
                             image_index = image_number - 1;
                             image_speed = 0;
 
-                            if (mover_para(pos_alvo[0], pos_alvo[1], 0.09)) {
+                            if (mover_para(pos_alvo[0], pos_alvo[1], 0.1)) {
                                 fase_ataque = 1;
                             }
                         }
@@ -251,7 +251,7 @@ switch (_estado) {
                     break;
 
                     case 6:
-                        if (mover_para(pos_idle[0], pos_idle[1], 0.08)) {
+                        if (mover_para(pos_idle[0], pos_idle[1], 0.09)) {
 							sprite_index = sIdleTribuna;
 							image_speed = 1;
                             _estado = "Idle";
@@ -333,7 +333,7 @@ switch (_estado) {
                     break;
 				
                     case 4:
-                        if (mover_para(pos_idle[0], pos_idle[1], 0.08)) {
+                        if (mover_para(pos_idle[0], pos_idle[1], 0.09)) {
 							sprite_index = sIdleTribuna;
 							image_speed = 1;
                             cooldown_ataque = 2 * room_speed;
