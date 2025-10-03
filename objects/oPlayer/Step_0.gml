@@ -8,7 +8,7 @@ if (_vidaPlayer = 0) {hs = 0}
 if (_vidaPlayer != 0){
 	_right  = keyboard_check(vk_right) || gamepad_axis_value(global.gamepad_id, gp_axislh) > global.gamepad_deadzone
 	_left   = keyboard_check(vk_left) || gamepad_axis_value(global.gamepad_id, gp_axislh) < -global.gamepad_deadzone
-	_jump   = keyboard_check_pressed(vk_up) || keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(0, gp_face1);
+	_jump   = keyboard_check_pressed(vk_up) || keyboard_check_pressed(vk_space) || gamepad_button_check_pressed(global.gamepad_id, gp_face1);
 	_jump_hold   = keyboard_check(vk_up) || keyboard_check(vk_space) || gamepad_button_check(global.gamepad_id, gp_face1);
 	_tiro   = keyboard_check_pressed(ord("Z")) || gamepad_button_check_pressed(global.gamepad_id, gp_face2);
 	
