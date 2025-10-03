@@ -153,7 +153,6 @@ else if (_estado == "Atacando") {
 		            else {
 		                timer_fase--;
 
-		                // --- Só troca para idle quando animação de ataque terminar ---
 		                if (sprite_index == sAtacandopenaTuning && image_index >= 5) {
 		                    sprite_index = sAtacandopenaidleTuning;
 		                    image_index = 0;
@@ -195,23 +194,22 @@ else if (_estado == "Atacando") {
 		                if (oPlayer.x > x) image_xscale = 1; else image_xscale = -1;
 		            }
 
-		            if (mover_para(pos_idle[0], pos_idle[1], 0.05)) {
-		                if (instance_exists(oPlayer)) {
-		                    pos_alvo = [oPlayer.x, oPlayer.y];
-		                }
-		                sprite_index = sAtaqueVoandoTuring; 
-						if (image_index >= 1){
-			                image_index = 1
-			                image_speed = 0;
-							fase_ataque = 1;
-						}
-		            }
+					sprite_index = sAtaqueVoandoTuring; 
+					if (image_index >= 1){
+						image_index = 1
+						image_speed = 0;
+						timer_fase = 1 * room_speed;
+						fase_ataque = 1;
+					}
 		        break;
 
 		        case 1: // Investida rápida
-		            if (mover_para(pos_alvo[0], pos_alvo[1], 0.07)) {
-			            fase_ataque = 2;
-		            }
+					if (timer_fase > 0){timer_fase--}
+					else{ 
+						if (mover_para(pos_alvo[0], pos_alvo[1], 0.07)){
+							fase_ataque = 2;
+						}
+					}
 		        break;
 
 		        case 2: // Volta pro Idle

@@ -1,9 +1,9 @@
 /// ==========================
 /// Variáveis principais
 /// ==========================
-padrao_ataque = ["Espada_Cima", "Espada_Cima"];
+padrao_ataque = ["Dash", "Espadas_Baixo", "Espada_Cima"];
 
-_vidaBoss = 100;
+_vidaBoss = 150;
 
 x = 239.5;
 y = 168;
@@ -13,20 +13,21 @@ ultimo_canto    = -1;
 ultimo_espada   = -1;
 espadas_cima    = [];
 
+canto_escolhido = "";
+_espada_cima    = -1;
 
 _estado = "Intro";
 fase_ataque = 0;
 fase_morte = 0;
 fase_intro = 0;
 
-tempo_morte = 0 * room_speed;
+tempo_morte = 0;
 
 vuneravel = true;
 inv_timer = 0;
 
 cooldown_ataque = 3.5 * room_speed; // 3.5 seg entre ataques
 timer_fase      = 5 * room_speed;   // usado nos ataques por fases
-penas_restantes = 0;                // só usado no ataque de penas
 
 // ==========================
 // Posições
@@ -84,33 +85,33 @@ ataque_boss = function() {
                 ultimo_canto = canto;
 
                 switch (canto) {
-                    case 0: pos_alvo = [65, 256]; canto_escolhido = "esquerda"; break;
-                    case 1: pos_alvo = [65, 128]; canto_escolhido = "esquerda_cima"; break;
-                    case 2: pos_alvo = [415, 128]; canto_escolhido = "direita"; break;
-                    case 3: pos_alvo = [415, 256]; canto_escolhido = "direita_cima"; break;
+                    case 0: pos_alvo = [65, 256];  canto_escolhido = "esquerda";      break;
+                    case 1: pos_alvo = [65, 128];  canto_escolhido = "esquerda_cima"; break;
+                    case 2: pos_alvo = [415, 128]; canto_escolhido = "direita";       break;
+                    case 3: pos_alvo = [415, 256]; canto_escolhido = "direita_cima";  break;
                 }
-
             break;
 
             case "Espadas_Baixo":
-				canto = ultimo_canto;
+                var canto = ultimo_canto;
                 while (canto == ultimo_canto) {
                     canto = irandom(1);
                 }
                 ultimo_canto = canto;
 
                 switch (canto) {
-                    case 0: pos_alvo = [65, 128]; canto_escolhido = "esquerda_cima"; break;
-                    case 1: pos_alvo = [415, 128]; canto_escolhido = "direita_cima"; break;
+                    case 0: pos_alvo = [65, 128];  canto_escolhido = "esquerda_cima"; break;
+                    case 1: pos_alvo = [415, 128]; canto_escolhido = "direita_cima";  break;
                 }
             break;
 
             case "Espada_Cima":
-				_espada_cima = ultimo_espada;
-                while (_espada_cima == ultimo_espada) {
-                    _espada_cima = irandom(3);
+                var espada = ultimo_espada;
+                while (espada == ultimo_espada) {
+                    espada = irandom(3);
                 }
-                ultimo_espada = _espada_cima;
+                ultimo_espada = espada;
+                _espada_cima = espada;
             break;
         }
     }

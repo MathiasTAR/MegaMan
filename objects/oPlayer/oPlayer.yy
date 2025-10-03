@@ -41,8 +41,8 @@
     "path":"sprites/sIdle/sIdle.yy",
   },
   "spriteMaskId":{
-    "name":"sCorrendo",
-    "path":"sprites/sCorrendo/sCorrendo.yy",
+    "name":"sIdle",
+    "path":"sprites/sIdle/sIdle.yy",
   },
   "visible":true,
 }

@@ -14,7 +14,7 @@ if (_vidaPlayer != 0){
 	
 	// COlisão e movimento horizontal
 	hs = (_right - _left) * hsmax;
-	move_and_collide(hs, 0, _COLISION, 12);
+	move_and_collide(hs, 0.1, _COLISION, 32);
 }
 
 var sala1   = keyboard_check_pressed(ord("1"));
@@ -55,7 +55,7 @@ if (!_jump_hold and vs < 0){
 }
 
 // Colisão Vertical
-move_and_collide(0, vs, _COLISION, 20);
+move_and_collide(0, vs - 0.1, _COLISION,32);
 #endregion
 
 #region Tiro
