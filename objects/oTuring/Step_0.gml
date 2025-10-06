@@ -39,7 +39,7 @@ if (_estado == "Morto") {
         break;
 
         case 3:
-            if (tempo_morte > 0){tempo_morte --} else {instance_destroy();}
+            if (tempo_morte > 0){tempo_morte --} else {instance_destroy(); instance_create_layer(x,y - 200,"Player", oPoderPena)}
         break;
     }
 }

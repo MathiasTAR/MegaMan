@@ -5,7 +5,7 @@ padrao_ataque = ["Cobrir_tela", "Penas", "Ataque_rapido_Player"];
 
 _vidaBoss = 100
 x = 435;
-y = 155
+y = 157
 
 ultimo_ataque = -1;
 ultimo_canto = -1;

@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sVenenoCaindoNeuroToxica",
-    "path":"sprites/sVenenoCaindoNeuroToxica/sVenenoCaindoNeuroToxica.yy",
+    "name":"sVenenoCriandoNeuroToxica",
+    "path":"sprites/sVenenoCriandoNeuroToxica/sVenenoCriandoNeuroToxica.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -15,7 +15,11 @@ fase_morte     = 0;
 
 // Armazena os venenos criados
 venenos_ativos = [];
-veneno_destinos = [];
+veneno_index = 0;
+qtn_veneno = 0;
+delay_veneno = 0;
+tempo_veneno = 0;
+
 
 // Timers e flags
 tempo_proximo = 0
