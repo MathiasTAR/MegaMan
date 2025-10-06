@@ -12,15 +12,15 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"720ae9fd-77d3-425f-99aa-fbcf42261554","name":"720ae9fd-77d3-425f-99aa-fbcf42261554","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"3a07091c-56fa-422e-ae9e-eb2b7de545b0","name":"3a07091c-56fa-422e-ae9e-eb2b7de545b0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"c09e6315-669c-49c7-824a-8eda9112c63c","name":"c09e6315-669c-49c7-824a-8eda9112c63c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"ac15f5b3-a73c-4102-b676-af8d1e1514bb","name":"ac15f5b3-a73c-4102-b676-af8d1e1514bb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":54,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"2e72aad9-77d4-41a3-9fbd-a0fb13aa8c71","blendMode":0,"displayName":"default","isLocked":false,"name":"2e72aad9-77d4-41a3-9fbd-a0fb13aa8c71","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"3d1f325f-8c48-4bc5-9879-38f6d86aab20","blendMode":0,"displayName":"default","isLocked":false,"name":"3d1f325f-8c48-4bc5-9879-38f6d86aab20","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sNeurotoxica",
   "nineSlice":null,
@@ -72,11 +72,11 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"720ae9fd-77d3-425f-99aa-fbcf42261554","path":"sprites/sNeurotoxica/sNeurotoxica.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"881399e1-943f-409c-905d-13427b651b14","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c09e6315-669c-49c7-824a-8eda9112c63c","path":"sprites/sNeurotoxica/sNeurotoxica.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"77126e43-e074-484e-95e8-e4d4254dd49a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3a07091c-56fa-422e-ae9e-eb2b7de545b0","path":"sprites/sNeurotoxica/sNeurotoxica.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"171f33d6-f19d-4902-a974-4eaa060e37a1","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ac15f5b3-a73c-4102-b676-af8d1e1514bb","path":"sprites/sNeurotoxica/sNeurotoxica.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"7b6c8bcc-71f5-44aa-ad70-9fe950a58df5","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

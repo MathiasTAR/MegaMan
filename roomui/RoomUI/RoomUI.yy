@@ -43,7 +43,7 @@
               ],"flexDirection":0,"gapRow":6.0,"height":{"unit":3,"value":80.0,},"justifyContent":1,"name":"Botoes","nodeColour":4282970795,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":2,"value":95.0,},},
             {"$GMRSpriteGraphic":"v1","%Name":"graphic_9E0713E","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":4,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_9E0713E","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"MenuBg","path":"sprites/MenuBg/MenuBg.yy",},"x":0.0,"y":0.0,},
           ],"flexDirection":0,"height":{"unit":2,"value":50.0,},"justifyContent":1,"marginRight":{"unit":1,"value":30.0,},"name":"MenuEscolha","nodeColour":4294080840,"positionType":2,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":2,"value":35.0,},},
-      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"ui_menu","nodeColour":4282927602,"resourceType":"GMRUILayer","resourceVersion":"2.0",},
+      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"ui_menu","nodeColour":4282927602,"resourceType":"GMRUILayer","resourceVersion":"2.0","visible":false,},
     {"$GMRUILayer":"v1","%Name":"ui_opcoes","alignItems":2,"children":[
         {"$GMRFlexPanel":"","%Name":"Fundo","alignItems":2,"alignSelf":2,"children":[
             {"$GMRFlexPanel":"","%Name":"Titulo","alignItems":2,"alignSelf":2,"children":[
@@ -70,7 +70,7 @@
                   ],"flexDirection":0,"height":{"unit":3,"value":100.0,},"justifyContent":1,"name":"SFX","nodeColour":4292997704,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":100.0,},},
                 {"$GMRFlexPanel":"","%Name":"Controles","alignItems":2,"children":[
                     {"$GMRFlexPanel":"","%Name":"Texto","alignItems":2,"children":[
-                        {"$GMRTextItem":"v2","%Name":"text_4618BBF4","alignment":0,"charSpacing":0.0,"colour":16777215,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"fontId":{"name":"Botao","path":"fonts/Botao/Botao.yy",},"frameH":0.0,"frameW":0.0,"frozen":false,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"lineSpacing":0.0,"name":"text_4618BBF4","paragraphSpacing":0.0,"resourceType":"GMRTextItem","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"text":"Controles","wrap":false,"x":0.0,"xorigin":0.0,"y":0.0,"yorigin":0.0,},
+                        {"$GMRTextItem":"v2","%Name":"text_4618BBF4","alignment":1,"charSpacing":0.0,"colour":16777215,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"fontId":{"name":"Botao","path":"fonts/Botao/Botao.yy",},"frameH":0.0,"frameW":0.0,"frozen":false,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"lineSpacing":0.0,"name":"text_4618BBF4","paragraphSpacing":0.0,"resourceType":"GMRTextItem","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"text":"Controles","wrap":false,"x":0.0,"xorigin":0.0,"y":0.0,"yorigin":0.0,},
                       ],"flexDirection":0,"height":{"unit":3,"value":13.0,},"justifyContent":1,"name":"Texto","nodeColour":4282970760,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":65.0,},},
                     {"$GMRInstance":"v2","%Name":"inst_4364AE97","colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":4,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4364AE97","objectId":{"name":"oBotao_menu","path":"objects/oBotao_menu/oBotao_menu.yy",},"properties":[
                         {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBotao_menu","path":"objects/oBotao_menu/oBotao_menu.yy",},"propertyId":{"name":"acao","path":"objects/oBotao_menu/oBotao_menu.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"Controles\"",},
@@ -89,7 +89,7 @@
               ],"flexDirection":0,"height":{"unit":3,"value":38.0,},"justifyContent":1,"marginBottom":{"unit":1,"value":15.0,},"marginRight":{"unit":1,"value":15.0,},"name":"Voltar","nodeColour":4294071880,"paddingBottom":{"unit":1,"value":9.0,},"paddingLeft":{"unit":1,"value":9.0,},"paddingRight":{"unit":1,"value":9.0,},"paddingTop":{"unit":1,"value":9.0,},"positionTop":{"unit":2,"value":77.5,},"positionType":2,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":38.0,},},
             {"$GMRSpriteGraphic":"v1","%Name":"graphic_32D76D6A","animationSpeed":1.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":4,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_32D76D6A","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"MenuBg","path":"sprites/MenuBg/MenuBg.yy",},"x":0.0,"y":0.0,},
           ],"flexDirection":0,"height":{"unit":2,"value":80.0,},"justifyContent":1,"name":"Fundo","nodeColour":4294080840,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":2,"value":70.0,},},
-      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"ui_opcoes","nodeColour":4282970703,"resourceType":"GMRUILayer","resourceVersion":"2.0","visible":false,},
+      ],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"ui_opcoes","nodeColour":4282970703,"resourceType":"GMRUILayer","resourceVersion":"2.0",},
   ],
   "locked":false,
   "name":"RoomUI",
@@ -100,5 +100,5 @@
   "resourceType":"GMRoomUI",
   "resourceVersion":"2.0",
   "viewspaceChildren":[],
-  "visible":false,
+  "visible":true,
 }

@@ -34,13 +34,13 @@ function cameraInit() {
     view_visible[0]  = true;
 }
 
-function cameraUPD() {
+function cameraUPD(objeto = oPlayer, offset = 0.5) {
     var _cameraX = camera_get_view_x(view_camera[0]);
     var _cameraY = camera_get_view_y(view_camera[0]);
 
-	if (instance_exists(oPlayer)){
-	    var _targetX = oPlayer.x - (global.cameraWidth * 0.5);
-	    var _targetY = oPlayer.y - (global.cameraHeight * 0.5);
+	if (instance_exists(objeto)){
+	    var _targetX = objeto.x - (global.cameraWidth * 0.5);
+	    var _targetY = objeto.y - (global.cameraHeight * offset);
 
 	    // Limites
 	    _targetX = clamp(_targetX, 0, room_width  - global.cameraWidth);

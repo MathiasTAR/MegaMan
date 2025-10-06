@@ -231,7 +231,7 @@ estado_dano.inicia = function()
 
 	
     kb_timer = 0.1 * room_speed;
-    kb_force = 2;
+    kb_force = 1;
 
     // ativa invencibilidade
     inv_timer = 1.5 * room_speed;
