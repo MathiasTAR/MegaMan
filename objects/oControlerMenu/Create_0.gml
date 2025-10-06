@@ -1,3 +1,5 @@
+oSoundController.music_theme.play = true
+
 // Estado do menu
 menu_atual = "principal";
 botao_selecionado = 0;

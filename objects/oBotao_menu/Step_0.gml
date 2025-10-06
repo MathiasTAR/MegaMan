@@ -15,7 +15,7 @@ if (selecionado && !selecionando_antes) {
 
 // Animação e sprite
 if (selecionado) {
-    xscale = lerp(xscale, botao_x_original * 1.3, 0.1);
+    xscale = lerp(xscale, botao_x_original * 1.2, 0.1);
     image_index = 1;
 } else {
     image_index = 0;

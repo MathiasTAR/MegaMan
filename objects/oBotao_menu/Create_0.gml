@@ -3,7 +3,6 @@ cameraInit();
 
 selecionando_antes = false;
 
-
 // Tamanho original do botão
 botao_x_original = image_xscale;
 botao_y_original = image_yscale;

@@ -1,3 +1,5 @@
-_pena = true
+// Inherit the parent event
+event_inherited();
 
-y = 300
+Turing = true
+y = 500

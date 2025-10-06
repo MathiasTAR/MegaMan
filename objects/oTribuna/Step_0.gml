@@ -25,8 +25,15 @@ switch (_estado) {
                     image_index = image_number - 1;
                     image_speed = 0;
                     
-                    if (tempo_morte > 0) tempo_morte--;
-                    else instance_destroy();
+                    if (tempo_morte > 0) {tempo_morte--;}
+                    else 
+					{ 
+						if (mover_para(pos_idle[0], pos_idle[1], 0.08)){
+							instance_destroy(); 
+							instance_create_layer(x,y - 195,"Player", oPoderEspada)
+							oSoundController.theme_Tribuna.play = false
+						}
+					}
                 }
             break;
         }

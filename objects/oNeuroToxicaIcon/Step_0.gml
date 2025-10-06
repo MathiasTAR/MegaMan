@@ -12,5 +12,7 @@ if (selecionado) {
 
 if ((keyboard_check_pressed(vk_enter) or gamepad_button_check_pressed(global.gamepad_id, gp_start))  and selecionado) {
 	oSoundController.sfx_botao_selecionado.play = true;
-	room_goto(Debug)
+	oSoundController.music_theme.play = false
+	oSoundController.theme_NeuroToxica.play = true
+	room_goto(Room_NeuroToxica)
 };

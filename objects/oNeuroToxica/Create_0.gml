@@ -3,7 +3,7 @@
 /// ==========================
 padrao_ataque = ["Veneno", "Veneno"]; // lista de ataques possíveis
 
-_vidaBoss = 200;
+_vidaBoss = 150;
 
 // Controle de ataques e estados
 ultimo_ataque  = -1;
@@ -27,7 +27,7 @@ tempo_proximo = 0
 tempo_morte    = 0;
 inv_timer      = 0;
 vuneravel      = true;
-cooldown_ataque = 3.5 * room_speed;
+cooldown_ataque = 1.5 * room_speed;
 timer_fase     = 0;
 
 // ==========================

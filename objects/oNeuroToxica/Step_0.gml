@@ -28,9 +28,15 @@ switch (_estado) {
     // --------------------------
     case "Idle":
         // Chamar ataque (teste manual com CTRL)
-        if (keyboard_check_pressed(vk_control)) {
-            ataque_boss();
-        }
+        //if (keyboard_check_pressed(vk_control)) {
+        //    ataque_boss();
+        //}
+		
+		// Chamar ataque quando cooldown acabar
+	    if (cooldown_ataque <= 0 && _vidaBoss > 0 && oPlayer._vidaPlayer > 0) {
+	        ataque_boss();
+	    }
+		
     break;
 
     // --------------------------
@@ -102,81 +108,94 @@ switch (_estado) {
                     // ======================
                     // Fase 2: Venenos sendo arremessados
                     // ======================
-                    case 2:
-                        if (timer_fase > 0) {
-                            timer_fase--;
-                        } else {
-                            var todos_arremessados = true;
-                            
-                            for (var i = 0; i < array_length(venenos_ativos); i++) {
-                                var ven = venenos_ativos[i];
-                                
-                                if (ven.estado_veneno == "NaBoca") {
-                                    // Iniciar movimento de arremesso
-                                    ven.estado_veneno = "Arremessando";
-                                    ven.sprite_index = sVenenoCaindoNeuroToxica;
-                                    ven.image_index = 0;
-                                    ven.image_speed = 0.5;
-                                    
-                                    // Calcular trajetória parabólica
-                                    var start_x = ven.x;
-                                    var start_y = ven.y;
-                                    var target_x = ven.target_x;
-                                    var peak_y = ven.altura_alvo; // Ponto mais alto
-                                    
-                                    // Parâmetros da parábola
-                                    ven.arremesso_t = 0;
-                                    ven.arremesso_speed = 0.03;
-                                    ven.arremesso_start_x = start_x;
-                                    ven.arremesso_start_y = start_y;
-                                    ven.arremesso_peak_x = (start_x + target_x) / 2;
-                                    ven.arremesso_peak_y = peak_y;
-                                    ven.arremesso_target_x = target_x;
-                                    
-                                    todos_arremessados = false;
-                                }
-                                else if (ven.estado_veneno == "Arremessando") {
-                                    // Continuar movimento parabólico
-                                    ven.arremesso_t += ven.arremesso_speed;
-                                    
-                                    if (ven.arremesso_t < 1) {
-                                        // Fórmula da curva de Bézier quadrática para trajetória suave
-                                        var mt = 1 - ven.arremesso_t;
-                                        ven.x = mt * mt * ven.arremesso_start_x + 
-                                               2 * mt * ven.arremesso_t * ven.arremesso_peak_x + 
-                                               ven.arremesso_t * ven.arremesso_t * ven.arremesso_target_x;
-                                        ven.y = mt * mt * ven.arremesso_start_y + 
-                                               2 * mt * ven.arremesso_t * ven.arremesso_peak_y + 
-                                               ven.arremesso_t * ven.arremesso_t * ven.altura_alvo;
-                                        todos_arremessados = false;
-                                    } else {
-                                        // Chegou ao ponto alto, começar a cair
-                                        ven.estado_veneno = "Caindo";
-                                        ven.x = ven.arremesso_target_x;
-                                        ven.y = ven.altura_alvo;
-                                    }
-                                }
-                                else if (ven.estado_veneno == "Caindo") {
-                                    // Verificar se chegou no chão
-                                    if (!place_meeting(ven.x, ven.y + 4, oColisao)) {
-                                        ven.y += 4; // Velocidade de queda
-                                        todos_arremessados = false;
-                                    } else {
-                                        // Colidiu com o chão
-                                        ven.estado_veneno = "NoChao";
-                                        ven.sprite_index = sVenenoNoChaoNeuroToxica;
-                                        ven.image_speed = 0;
-                                        ven.image_index = 0;
-                                    }
-                                }
-                            }
-                            
-                            if (todos_arremessados) {
-                                timer_fase = 2 * room_speed; // 2 segundos no chão
-                                fase_ataque = 3;
-                            }
-                        }
-                    break;
+                    // ======================
+					case 2:
+					    if (timer_fase > 0) {
+					        timer_fase--;
+					    } else {
+					        var todos_no_chao_ou_caindo = true;
+					        var algum_ainda_movendo = false;
+        
+					        for (var i = 0; i < array_length(venenos_ativos); i++) {
+					            var ven = venenos_ativos[i];
+            
+					            if (ven.estado_veneno == "NaBoca") {
+					                // Iniciar movimento de arremesso
+					                ven.estado_veneno = "Arremessando";
+					                ven.sprite_index = sVenenoCaindoNeuroToxica;
+					                ven.image_index = 0;
+					                ven.image_speed = 0.5;
+                
+					                // Calcular trajetória parabólica
+					                var start_x = ven.x;
+					                var start_y = ven.y;
+					                var target_x = ven.target_x;
+					                var peak_y = ven.altura_alvo;
+                
+					                // Parâmetros da parábola
+					                ven.arremesso_t = 0;
+					                ven.arremesso_speed = 0.03;
+					                ven.arremesso_start_x = start_x;
+					                ven.arremesso_start_y = start_y;
+					                ven.arremesso_peak_x = (start_x + target_x) / 2;
+					                ven.arremesso_peak_y = peak_y;
+					                ven.arremesso_target_x = target_x;
+                
+					                algum_ainda_movendo = true;
+					            }
+					            else if (ven.estado_veneno == "Arremessando") {
+					                // Continuar movimento parabólico
+					                ven.arremesso_t += ven.arremesso_speed;
+                
+					                if (ven.arremesso_t < 1) {
+					                    // Fórmula da curva de Bézier
+					                    var mt = 1 - ven.arremesso_t;
+					                    ven.x = mt * mt * ven.arremesso_start_x + 
+					                           2 * mt * ven.arremesso_t * ven.arremesso_peak_x + 
+					                           ven.arremesso_t * ven.arremesso_t * ven.arremesso_target_x;
+					                    ven.y = mt * mt * ven.arremesso_start_y + 
+					                           2 * mt * ven.arremesso_t * ven.arremesso_peak_y + 
+					                           ven.arremesso_t * ven.arremesso_t * ven.altura_alvo;
+					                    algum_ainda_movendo = true;
+					                } else {
+					                    // Chegou ao ponto alto, começar a cair
+					                    ven.estado_veneno = "Caindo";
+					                    ven.x = ven.arremesso_target_x;
+					                    ven.y = ven.altura_alvo;
+					                    algum_ainda_movendo = true;
+					                }
+					            }
+					            else if (ven.estado_veneno == "Caindo") {
+					                // Verificar colisão com mais precisão
+					                var collision = place_meeting(ven.x, ven.y - 8, oColisao);
+                
+					                if (!collision) {
+					                    ven.y += 4; // Velocidade de queda
+					                    algum_ainda_movendo = true;
+					                } else {
+					                    // Colidiu com o chão - ajustar posição exata
+					                    var adjust = 0;
+					                    while (!place_meeting(ven.x, ven.y + adjust, oColisao) && adjust < 10) {
+					                        adjust++;
+					                    }
+					                    ven.y += adjust - 1;
+                    
+					                    // Mudar para estado no chão
+					                    ven.estado_veneno = "NoChao";
+					                    ven.sprite_index = sVenenoNoChaoNeuroToxica;
+					                    ven.image_speed = 0;
+					                    ven.image_index = 0;
+					                }
+					            }
+					        }
+        
+					        // Só avança quando NENHUM veneno está se movendo
+					        if (!algum_ainda_movendo) {
+					            timer_fase = 2 * room_speed; // 2 segundos no chão
+					            fase_ataque = 3;
+					        }
+					    }
+					break;
 
                     // ======================
                     // Fase 3: Espera no chão
@@ -201,7 +220,7 @@ switch (_estado) {
                     // ======================
                     case 4:
                         _estado = "Idle";
-                        cooldown_ataque = 3.5 * room_speed; // Reset cooldown
+                        cooldown_ataque = 2.5 * room_speed; // Reset cooldown
                     break;
                 }
             break;
@@ -214,7 +233,7 @@ switch (_estado) {
     case "Morto":
         switch (fase_morte) {
             case 0:
-                sprite_index = sMorrendoAranha;
+                sprite_index = sNeurotoxica;
                 image_index = 0;
                 image_speed = 0.8;
                 tempo_morte = 3 * room_speed;
@@ -225,8 +244,8 @@ switch (_estado) {
                 if (image_index >= image_number - 1) {
                     image_index = image_number - 1;
                     image_speed = 0;
-                    if (tempo_morte > 0) tempo_morte--;
-                    else instance_destroy();
+                    if (tempo_morte > 0) {tempo_morte--;}
+                    else {instance_destroy(); oSoundController.theme_NeuroToxica.play = false}
                 }
             break;
         }
@@ -243,8 +262,10 @@ if (inv_timer > 0) {
     image_blend = c_white;
 }
 
+show_debug_message(cooldown_ataque)
+
 // ==========================
 // COOLDOWNS
 // ==========================
-if (cooldown_ataque > 0) cooldown_ataque--;
+if (cooldown_ataque > 0 and oVenenoChaoNeuroToxica.FaseVenenoChao != 0) cooldown_ataque--;
 if (inv_timer > 0) inv_timer--;

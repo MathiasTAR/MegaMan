@@ -1,0 +1,6 @@
+if (instance_exists(oVenenoNeuroToxica)) {
+	if (inv_timer <= 0 and estado_atual != estado_morto){
+		Dano_KB(5)
+		troca_estado(estado_dano);
+	}
+};
