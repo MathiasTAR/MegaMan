@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"sCorrendoAtirando",
+  "%Name":"sCorrendoAtirando_Tribuna",
   "bboxMode":0,
   "bbox_bottom":43,
   "bbox_left":0,
@@ -23,19 +23,19 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"c5191e80-1ea1-42db-a969-cfe6ef2338eb","blendMode":0,"displayName":"default","isLocked":false,"name":"c5191e80-1ea1-42db-a969-cfe6ef2338eb","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"sCorrendoAtirando",
+  "name":"sCorrendoAtirando_Tribuna",
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"player_default",
-    "path":"folders/Sprites/Player/player_default.yy",
+    "name":"player_Tribuna",
+    "path":"folders/Sprites/Player/player_Tribuna.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"sCorrendoAtirando",
+    "%Name":"sCorrendoAtirando_Tribuna",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -59,7 +59,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"sCorrendoAtirando",
+    "name":"sCorrendoAtirando_Tribuna",
     "playback":1,
     "playbackSpeed":6.0,
     "playbackSpeedType":0,
@@ -73,13 +73,13 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"76cb707b-a886-4acb-b6bc-5118844c241b","path":"sprites/sCorrendoAtirando/sCorrendoAtirando.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"76cb707b-a886-4acb-b6bc-5118844c241b","path":"sprites/sCorrendoAtirando_Tribuna/sCorrendoAtirando_Tribuna.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"6b757ae6-4b8b-4d35-bf40-9c978a03afed","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e7568302-bdca-4c36-910a-e36112d2e9b4","path":"sprites/sCorrendoAtirando/sCorrendoAtirando.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e7568302-bdca-4c36-910a-e36112d2e9b4","path":"sprites/sCorrendoAtirando_Tribuna/sCorrendoAtirando_Tribuna.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"02a0fc48-0763-4e72-8144-8d755d34f338","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c3e4795e-5c38-478b-9f8f-046cbd9dea1a","path":"sprites/sCorrendoAtirando/sCorrendoAtirando.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c3e4795e-5c38-478b-9f8f-046cbd9dea1a","path":"sprites/sCorrendoAtirando_Tribuna/sCorrendoAtirando_Tribuna.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"802bcfc9-2f8c-4d55-9237-3f333140fa31","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

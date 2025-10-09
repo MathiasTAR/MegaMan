@@ -3,6 +3,12 @@ if (timerL > 0) timerL--;
 if (timerR > 0) timerR--;
 if (inv_timer > 0) inv_timer--;
 
+if (oNeuroToxica._vidaBoss <= 0) {
+	oColisaoPlayer1.x = -24;
+	oColisaoPlayer2.x = 440;
+	instance_destroy();
+}
+
 // ==============================
 // Lado Esquerdo
 // ==============================

@@ -6,7 +6,9 @@ var _COLISION = layer_tilemap_get_id("tl_cenario");
 // ==========================
 if (_vidaBoss <= 0) {
     _vidaBoss = 0;
-    _estado = "Morto";
+	if (mover_para(pos_idle[0], pos_idle[1], 0.08)){
+		_estado = "Morto";
+	}
 }
 
 switch (_estado) {
@@ -28,11 +30,9 @@ switch (_estado) {
                     if (tempo_morte > 0) {tempo_morte--;}
                     else 
 					{ 
-						if (mover_para(pos_idle[0], pos_idle[1], 0.08)){
-							instance_destroy(); 
-							instance_create_layer(x,y - 195,"Player", oPoderEspada)
-							oSoundController.theme_Tribuna.play = false
-						}
+						instance_destroy(); 
+						instance_create_layer(x,y - 195,"Player", oPoderEspada)
+						oSoundController.theme_Tribuna.play = false
 					}
                 }
             break;

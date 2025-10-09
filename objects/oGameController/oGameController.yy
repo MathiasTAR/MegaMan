@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"oColisaoPlayer1",
+  "%Name":"oGameController",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oColisaoPlayer1",
+  "name":"oGameController",
   "overriddenProperties":[],
   "parent":{
-    "name":"NeuroToxica",
-    "path":"folders/Objetos/Inimigos/Boss/NeuroToxica.yy",
+    "name":"controllers",
+    "path":"folders/Objetos/controllers.yy",
   },
   "parentObjectId":null,
-  "persistent":false,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -29,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sHitbox",
-    "path":"sprites/sHitbox/sHitbox.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

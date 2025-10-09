@@ -1,8 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
-
-if (y < 140){
+if (y < 1680){
 	y++;
 }
 

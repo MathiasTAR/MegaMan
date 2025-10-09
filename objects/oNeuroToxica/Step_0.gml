@@ -233,7 +233,6 @@ switch (_estado) {
     case "Morto":
         switch (fase_morte) {
             case 0:
-                sprite_index = sNeurotoxica;
                 image_index = 0;
                 image_speed = 0.8;
                 tempo_morte = 3 * room_speed;
@@ -245,7 +244,11 @@ switch (_estado) {
                     image_index = image_number - 1;
                     image_speed = 0;
                     if (tempo_morte > 0) {tempo_morte--;}
-                    else {instance_destroy(); oSoundController.theme_NeuroToxica.play = false}
+                    else {
+							instance_destroy(); 
+							instance_create_layer(x,y - 195,"Player", oPoderNeuro)
+							oSoundController.theme_NeuroToxica.play = false
+						}
                 }
             break;
         }

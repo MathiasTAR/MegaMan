@@ -1,17 +1,22 @@
 {
   "$GMObject":"",
-  "%Name":"oColisaoPlayer1",
+  "%Name":"oPoderNeuro",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oColisaoPlayer1",
+  "name":"oPoderNeuro",
   "overriddenProperties":[],
   "parent":{
-    "name":"NeuroToxica",
-    "path":"folders/Objetos/Inimigos/Boss/NeuroToxica.yy",
+    "name":"Poderes",
+    "path":"folders/Objetos/Inimigos/Poderes.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oPoderPai",
+    "path":"objects/oPoderPai/oPoderPai.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,9 +35,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sHitbox",
-    "path":"sprites/sHitbox/sHitbox.yy",
+    "name":"sVenenoCaindoNeuroToxica",
+    "path":"sprites/sVenenoCaindoNeuroToxica/sVenenoCaindoNeuroToxica.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }
