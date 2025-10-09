@@ -8,28 +8,19 @@ botao_selecionado = 0;
 menu_botoes   = ["Jogar", "Opcao", "Sair"];
 opcoes_botoes = ["Master", "Music", "SFX", "Controles", "Voltar"];
 
-// Inicializa layers
-layer_set_visible("ui_menu", 0);
-layer_set_visible("ui_opcoes", 0);
-
-layer_set_visible("ui_menu", 1);
-
 
 // Função de ação dos botões
 botao_acao = function(acao) {
     switch (acao) {
 		
         case "Jogar":
-            layer_set_visible("ui_menu", 0);
-			layer_set_visible("ui_opcoes", 0);
-            room_goto_next();
+            room_goto(Select_Fase);
         break;
 
         case "Opção":
             menu_atual = "Opção";
             botao_selecionado = 0;
-            layer_set_visible("ui_menu", 0);
-            layer_set_visible("ui_opcoes", 1);
+			room_goto(Opcao);
         break;
 
         case "Sair":
@@ -45,8 +36,7 @@ botao_acao = function(acao) {
         case "Voltar":
             menu_atual = "principal";
             botao_selecionado = 0;
-            layer_set_visible("ui_opcoes", 0);
-            layer_set_visible("ui_menu", 1);
+			room_goto(Menu)
         break;
 			
     }

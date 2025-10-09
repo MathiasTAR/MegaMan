@@ -8,5 +8,5 @@ draw_set_color(c_white);
 
 
 for (var i = 0; i < 3; i++){
-	draw_text(x, y-1, acao);
+	draw_text(x, y-1.5, acao);
 }
